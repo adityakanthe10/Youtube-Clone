@@ -8,11 +8,11 @@ import more from '../../assets/more.png'
 import notification from '../../assets/notification.png' 
 import user_profile from '../../assets/user_profile.jpg' 
 
-const Navbar = () => {
+const Navbar = ({setSidebar}) => {
   return (
     <nav className='flex-div'>
         <div className="nav-left flex-div">
-            <img className='menu-icon' src={menu_icon} alt="" />
+            <img className='menu-icon' onClick={()=> setSidebar(prev=>prev===false?true:false)} src={menu_icon} alt="" />
             <img className="logo" src={logo} alt="" />
         </div>
 
